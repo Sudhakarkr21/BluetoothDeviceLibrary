@@ -3,23 +3,100 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:paddingLeft="10sp"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Connect"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
+        android:id="@+id/selectMeter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Select Meter"
+        app:layout_constraintTop_toBottomOf="@id/button"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnMeterMake"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="MeterMake"
+        app:layout_constraintTop_toBottomOf="@id/selectMeter"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/btnMeterSerailNo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Meter Serial Number"
+        app:layout_constraintTop_toBottomOf="@id/btnMeterMake"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnIntantKwh"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Instant KWH"
+        app:layout_constraintTop_toBottomOf="@id/btnMeterSerailNo"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"  />
+
+    <Button
+        android:id="@+id/btnprofileData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Profile Billing Data"
+        app:layout_constraintTop_toBottomOf="@id/btnIntantKwh"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnNonDLMS1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="NON DLMS 1 phase LNT"
+        app:layout_constraintTop_toBottomOf="@id/btnprofileData"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnNonDLMS3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="NON DLMS 3 phase LNT"
+        app:layout_constraintTop_toBottomOf="@id/btnNonDLMS1"
+        app:layout_constraintEnd_toEndOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Enter"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <TextView
+        android:id="@+id/txtRead"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlue"
+        android:textSize="12sp"
+        android:scrollbars="vertical"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/abel"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/guideline" />
 </androidx.constraintlayout.widget.ConstraintLayout>

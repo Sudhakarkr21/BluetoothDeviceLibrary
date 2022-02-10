@@ -17,6 +17,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 
 public class BluetoothConnectionService {
@@ -463,5 +464,15 @@ public class BluetoothConnectionService {
         Log.d(TAG, "write: Write Called.");
         //perform the write
         mConnectedThread.write(out);
+    }
+
+    public void write(String out) {
+        // Create temporary object
+        ConnectedThread r;
+
+        // Synchronize a copy of the ConnectedThread
+        Log.d(TAG, "write: Write Called.");
+        //perform the write
+        mConnectedThread.write(out.getBytes(StandardCharsets.UTF_8));
     }
 }
