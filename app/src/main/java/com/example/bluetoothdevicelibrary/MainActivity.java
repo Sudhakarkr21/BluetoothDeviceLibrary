@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity
             });
         });
 
-        String test = "CHetan";
-
         findViewById(R.id.selectMeter).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
